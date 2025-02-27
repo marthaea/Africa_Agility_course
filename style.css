@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #d35400;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.Title {
+    font-family: "Rubik Vinyl", serif;
+}
+
+.Ingredients {
+    font-family: "Outfit", serif;
+}
+
+.preparation {
+    font-family: "Outfit", serif;
+}
+.recipe {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #a04000;
+}
+
+ul, ol {
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
