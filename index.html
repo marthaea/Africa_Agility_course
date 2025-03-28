@@ -1,437 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloned Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-         height: 100%;
-         margin: 0;
-         padding: 0;
-         
-           
-       }
-
-
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: none;
-            z-index: 1000;
-        }
-
-        header h1 {
-            margin: 0;
-            color: white;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: rgb(44, 44, 44);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        nav ul li a:hover {
-            color: black;
-            background-color: rgb(176, 240, 218);
-            border-radius: 4px;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: url('hero.webp') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 20px;
-            border-radius: 40px;
-            background: white;
-            color: rgb(36, 36, 36);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            width: 200px;
-            margin-top: 20px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .btn:hover {
-            background: rgb(36, 36, 36);
-            color: white;
-            font-weight: bolder;
-        }
-
-        .btn1 {
-            display: inline-block;
-            padding: 20px;
-            border-radius: 40px;
-            background: transparent;
-            outline: auto;
-            color: black;
-            text-decoration: none;
-            text-transform: uppercase;
-            width: 150px;
-            text-align: center;
-            margin-top: 20px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .btn1:hover {
-            background-color: rgb(36, 36, 36);
-            color: #ddd;
-            font-weight: bolder;
-            border-radius: 40px;
-        }
-
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .sentence {
-            font-style: italic;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .pale-black {
-            color: #4a4a4a;
-        }
-
-        .green-text {
-            color: rgb(136, 189, 136);
-            text-decoration: none;
-        }
-
-        .green-text:hover {
-            text-decoration: underline;
-        }
-
-        .power_word {
-            font-family: "Merriweather", serif;
-            color: #4a4a4a;
-            font-size: 40px;
-            font-weight: lighter;
-        }
-
-        .phrase {
-            font-family: 'Times New Roman', Times, serif;
-            color: #4a4a4a;
-            font-size: 20px;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px;
-            max-width: 900px;
-            margin: 50px auto;
-        }
-
-        .image img {
-            width: 500px;
-            height: auto;
-            border-radius: 0px;
-            opacity: 0;
-        }
-
-        .left-image img {
-            transform: translateY(50px);
-            animation: appear-left 1s ease-out forwards;
-        }
-
-        .right-image img {
-            transform: translateX(50px);
-            animation: appear-right 1s ease-out forwards;
-        }
-
-        .text {
-            max-width: 400px;
-        }
-
-        h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            gap: 15px;
-            max-width: 100%;
-            padding: 20px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 0px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .signup-btn {
-            background-color: #06290e;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 20px;
-            margin-top: 10px;
-            width: 200px;
-            z-index: auto;
-        }
-
-        .signup-btn:hover {
-            background-color: #218838;
-        }
-
-        .reverse {
-            flex-direction: row-reverse;
-        }
-
-        
-       
-        .question-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: #fff;
-    padding: 50px;
-}
-
-.question {
-    font-size: 18px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bolder;
-}
-.btn2 {
-    background-color: #fff;
-    width: 200px;
-    border-radius: 60px;
-    color: #333;
-    font-weight: bolder;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #0d4932;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #218838;
-}
-
-
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .footer-content p {
-            font-size: 14px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-icon {
-            color: white;
-            font-size: 20px;
-            transition: color 0.3s;
-            align-items: center;
-        }
-
-        .social-icon:hover {
-            color: #007bff;
-        }
-
-        @keyframes appear-left {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes appear-right {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>My Blog</title>
 </head>
-
 <body>
-    <header>
-        <img src="logo.webp" alt="Logo" style="max-width: 200px; height: auto; cursor: pointer;">
-        <nav>
-            <ul>
-                <li><a href="#index.html">Home</a></li>
-                <li><a href="#offer.html">Offer</a></li>
-                <li><a href="#gallery.html">Gallery</a></li>
-                <li><a href="#blog.html">Blog</a></li>
-                <li><a href="#about.html">About Us</a></li>
-                <li><a href="#contact.html">Contact</a></li>
-                <li><a href="#signup.html" class="btn1">Sign Up</a></li>
+    <header class="nav">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="your-logo.png" alt="logo">
+            </div>
+            <ul class="desktop-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Corporation</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h3 style="font-style: italic; font-size: 30px; font-family: 'Times New Roman', Times, serif;">Adventurers</h3>
-        <h2>Let yourself be impressed</h2>
-        <a href="#signup" class="btn2">Sign Up</a>
-    </section>
-
-    <section id="about">
-        <h2 class="power_word">POWER OF IMPRESSIONS GUARANTEED<br>FEEL EXTREMELY</h2>
-        <p class="phrase">Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, <br>condimentum sed lacinia in, tincidunt eget mi. Praesent finibus mollis blandit.<br> Suspendisse vulputate turpis et erat iaculis viverra.</p>
-        <p class="sentence">
-            <span class="pale-black">Curabitur sit amet purus semper</span> <span class="green-text">Tortor Tempor.</span>
-        </p>
-    </section>
-
-    <section class="container">
-        <div class="image left-image">
-            <img src="rockclimbing.webp" alt="Image 1">
-        </div>
-        <div class="text">
-            <h2 style="font-weight: bolder; color: #184723;">ROCK CLIMBING</h2>
-            <p>Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, condimentum sed lacinia in.</p>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-    </section>
-
-    <section class="container reverse">
-        <div class="text">
-            <h2 style="font-weight: bolder; color: #184723">EXTREME OFFROAD</h2>
-            <p>Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, condimentum sed lacinia in.</p>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-        <div class="image right-image">
-            <img src="offroad.webp" alt="Image 2">
-        </div>
-    </section>
-
-    <section class="gallery">
-        <img src="Gallery_1.webp" alt="Gallery Image 1">
-        <img src="Gallery_2.webp" alt="Gallery Image 2">
-        <img src="Gallery_3.webp" alt="Gallery Image 3">
-        <img src="Gallery_4.webp" alt="Gallery Image 4">
-    </section>
-
-    <section class="question-container">
-        <p class="question">Do you have any question? suggestions? write to us</p>
-        <a href="#signup" class="btn">Sign Up</a>
-    </section>
-
-    <footer class="footer">
-        <span class="footer-content">
-            <p>&copy; Martha Praise Katusiime. All Rights Reserved.</p>
-            <div class="social-icons">
-                
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                
-                <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>My Lifestyle Blog</h1>
             </div>
-        </span>
-    </footer>
-</body>
+            <div class="hero-img">
+                <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_280/rwdMode_1/2400x800/Header_Home.webp" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+    
 
+    <main>
+        <section class="sec-1">
+            <div class="container">
+                <div class="text-div">
+                    <h3>What is my blog about?</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                </div>
+                <div class="img-div">
+                    <img src="your-image.jpg" alt="Blog Image">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h3>Categories</h3>
+            <div class="category-img">
+                    <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_286/rwdMode_1/270x350/Main_travel.webp" alt="">
+                <div class="overlay">
+                    <h2>TRAVELS</h2>
+                </div>
+            </div>
+            <div class="category-img">
+                    <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_286/rwdMode_1/270x350/Main_travel.webp" alt="">
+                <div class="overlay">
+                    <h2>INTERIORS</h2>
+                </div>
+            </div>
+                <div class="category-img">
+                        <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_286/rwdMode_1/270x350/Main_travel.webp" alt="">
+                    <div class="overlay">
+                        <h2>PERSONAL</h2>
+                    </div>
+                </div>
+               <div class="category-img">
+                        <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_286/rwdMode_1/270x350/Main_travel.webp" alt="">
+                    <div class="overlay">
+                     <h2>HEALTHY FOOD</h2>
+                    </div>
+                </div>
+              </div>
+                    <img src="https://zf2xqj.yourbrand.studio/files/dynamicContent/sites/zf2xqj/images/en/webpage_12/m5p6bgzu/element_289/rwdMode_1/270x350/Main_Interiors.webp" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
 </html>
