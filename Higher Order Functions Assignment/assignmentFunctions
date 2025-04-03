@@ -42,9 +42,6 @@ countries.forEach(country => console.log(country));
 names.forEach(name => console.log(name));
 numbers.forEach(number => console.log(number));
 
-
-
-
 //Using 'map' to create new arrays
 const upperCaseCountries = countries.map(country => country.toUpperCase());
 console.log(upperCaseCountries);
@@ -62,10 +59,8 @@ const productPrices = products.map(product => product.price);
 console.log(productPrices);
 
 
-
-
-
 //Using 'filter' to get specific results
+
 const countriesWithoutLand = countries.filter(country => !country.toLowerCase().includes('land'));
 console.log(countriesWithoutLand);
 
