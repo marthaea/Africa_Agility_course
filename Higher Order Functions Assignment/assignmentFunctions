@@ -1,0 +1,110 @@
+//ONE
+
+//function print full name
+function fullName() {
+    console.log("Katusiime Praise Martha");
+}
+fullName();
+
+
+//TWO
+//function return full name with parameters
+function fullNameWithparams(firstName, lastName) {
+    return `${firstName} ${lastName}`;
+}
+console.log(fullNameWithparams("Katusiime", "Martha"));
+
+
+
+//THREE
+// function adding two numbers
+function addNumbers(a, b) {
+    return a + b;
+}
+console.log(addNumbers(5, 10));
+
+
+
+//FOUR
+//Arrays for contries
+const countries = [
+    'Uganda', 'Kenya', 'Tanzania', 'South Sudan', 'Ethiopia', 'Rwanda','USA', 'Senegal', 'IceLand', 'Ireland', 'Japan', 'Kenya'
+];
+
+const names = ['Martha', 'Luis', 'Aggrey', 'Chris'];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const products = [
+    { product: 'banana', price: 3 }, { product: 'mango', price: 6 }, { product: 'potato', price: ' ' }, { product: 'avocado', price: 8 }, { product: 'coffee', price: 10 }, { product: 'tea', price: '' }, 
+];
+
+
+
+//FIVE
+//'forEach' to log each element
+countries.forEach(country => console.log(country));
+names.forEach(name => console.log(name));
+numbers.forEach(number => console.log(number));
+
+//'map' to create new arrays
+const upperCaseCountries = countries.map(country => country.toUpperCase());
+console.log(upperCaseCountries);
+
+const countriesLength = countries.map(country => country.length);
+console.log(countriesLength);
+
+const squaredNumbers = numbers.map(num => num ** 2);
+console.log(squaredNumbers);
+
+const upperCaseNames = names.map(name => name.toUpperCase());
+console.log(upperCaseNames);
+
+const productPrices = products.map(product => product.price);
+console.log(productPrices);
+
+//'filter' to get specific results
+const countriesWithoutLand = countries.filter(country => !country.toLowerCase().includes('land'));
+console.log(countriesWithoutLand);
+
+const sixLetterCountries = countries.filter(country => country.length === 6);
+console.log(sixLetterCountries);
+
+const sixOrMoreLetterCountries = countries.filter(country => country.length >= 6);
+console.log(sixOrMoreLetterCountries);
+
+
+
+
+
+const validPrices = products.filter(product => typeof product.price === 'number' && product.price !== '');
+console.log(validPrices);
+
+//finding countries with a common pattern using a function
+function findCountriesWithPattern(pattern) {
+    return countries.filter(country => country.toLowerCase().includes(pattern.toLowerCase()));
+}
+console.log(findCountriesWithPattern('land'));
+console.log(findCountriesWithPattern('ia'));
+console.log(findCountriesWithPattern('island'));
+console.log(findCountriesWithPattern('stan'));
+
+
+
+//SIX
+//assigning an object
+const dog = {};
+console.log(dog);
+
+dog.name = "Angeo";
+dog.legs = 4;
+dog.color = "white";
+dog.age = 1;
+dog.bark = function() {
+    return "woof woof!, woof woof..";
+};
+
+console.log(dog);
+console.log(dog.name);
+console.log(dog.legs);
+console.log(dog.color);
+console.log(dog.age);
+console.log(dog.bark());
